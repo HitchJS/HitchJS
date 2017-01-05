@@ -26543,12 +26543,7 @@
 	          _react2.default.createElement("br", null),
 	          "Price: ",
 	          _react2.default.createElement("input", { type: "text" }),
-	          _react2.default.createElement("br", null),
-	          _react2.default.createElement(
-	            "button",
-	            { type: "submit" },
-	            "Submit"
-	          ),
+
 	          _react2.default.createElement("br", null)
 	        )
 	      );

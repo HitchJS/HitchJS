@@ -12,6 +12,8 @@ class Login extends React.Component {
           <button type="button" onClick={function(){browserHistory.push('signup'); console.log(browserHistory)}}>Signup</button><br/>
           <button type="submit">Forgot Password?</button>
           
+
+          
         </form>
 
         {this.props.children}
