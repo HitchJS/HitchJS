@@ -13,6 +13,8 @@ class Login extends React.Component {
           <button type="submit">Forgot Password?</button>
           
         </form>
+
+        {this.props.children}
       </div>
     );
   }
