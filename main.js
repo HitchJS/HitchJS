@@ -8,6 +8,7 @@ import Signup from './components/signup.jsx';
 import RiderForm from './components/RiderForm.jsx';
 import App from './components/App.js'
 
+
 // child clone in react router in order to pass state
 
 ReactDOM.render((
@@ -25,3 +26,4 @@ ReactDOM.render((
    </Router>
 	
 ), document.getElementById('app'))
+
