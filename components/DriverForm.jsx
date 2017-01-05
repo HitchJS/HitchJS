@@ -11,6 +11,7 @@ class DriverForm extends React.Component {
           Departure Date: <input type="text"></input><br/>
           # of Open Seats: <input type="text"></input><br/>
           Price: <input type="text"></input><br/>
+
         </form>
       </div>
     );
