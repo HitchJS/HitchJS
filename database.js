@@ -1,5 +1,6 @@
 const pg = require('pg');
 const Sequelize = require('sequelize');
+
 //const sequelize = new Sequelize('postgres://vincentking:ilovetesting@localhost:5432/hitch');
 
 const sequelize = new Sequelize('postgres://fkdyrlsr:JzhorQXQH_LpYcX30-1LWHvZvPFuqvRX@elmer.db.elephantsql.com:5432/fkdyrlsr')
