@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "webpack-dev-server --hot"
   },
   "author": "",
   "license": "ISC",
