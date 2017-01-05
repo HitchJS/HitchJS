@@ -19,8 +19,8 @@ app.post('/drivers', function(req,res){
 })
 
 app.post('/trips', function(req,res){
-	//should this be a get request???
-	//make sure that they know to make this a post request for now
+	
+
 	//will query database for all drivers that meet the criteria of rider's request
 	Driver.findAll({
 		where: {
@@ -66,10 +66,18 @@ app.post('/updateSeats', function(req, res){
 	})
 })
 
+app.post('/random', function(req, res){
+	console.log("new random!!")
+	res.send("hello back!!")
+})
+
 app.listen(3000, function(){
     console.log("new Hitch server is running on 3000")
 
+
 })
+
+
 
 
 
