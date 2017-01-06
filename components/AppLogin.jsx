@@ -5,6 +5,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login">
+        <div className="innerLogin">
         <form>
           <label>User: </label><input type="text"></input><br/>
           <label>Password: </label><input type="text"></input><br/>
@@ -17,6 +18,7 @@ class Login extends React.Component {
         </form>
 
         {this.props.children}
+        </div>
       </div>
     );
   }

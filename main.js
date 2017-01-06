@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import {Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 import RoleSelector from './components/RoleSelector.jsx';
 import DriverForm from './components/DriverForm.jsx';
 import AppLogin from './components/AppLogin.jsx';
 import Signup from './components/signup.jsx';
 import RiderForm from './components/RiderForm.jsx';
-import App from './components/App.js'
+import App from './components/App.js';
 
 
-// child clone in react router in order to pass state
+// child clone in react router in order to pass state?
 
 ReactDOM.render((
    <Router history = {browserHistory}>

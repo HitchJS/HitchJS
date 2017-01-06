@@ -2,14 +2,16 @@ import React from 'react';
 class RiderForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: '', origin: '', destination: '', departure: ''};
+    this.state = {name: '', origin: '', destination: '', date: ''};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.originChange = this.originChange.bind(this);
     this.destinationChange = this.destinationChange.bind(this);
     this.departureChange = this.departureChange.bind(this);
   }
+  //these functions change state that is held on this page to the form value
   handleChange(event) {
+    console.log(this)
     console.log(event.target.value,)
     this.setState({name: event.target.value});
   }
@@ -23,14 +25,19 @@ class RiderForm extends React.Component {
   }
    departureChange(event) {
     console.log(event.target.value)
-    this.setState({departure: event.target.value});
+    this.setState({date: event.target.value});
   }
   handleSubmit(event) {
     //alert('A name was submitted: ' + this.state.destination +this.state.origin);
-    console.log(this.state.name, this.state.origin, this.state.destination, this.state.departure)
+    console.log(this.state.name, this.state.origin, this.state.destination, this.state.date)
     event.preventDefault();
-$.post( 'http://localhost:3000/random', {name: this.state.name, origin: this.state.origin, destination: this.state.destination, departure: this.state.departure} ).then(function(data){console.log(data)})
-  }
+    //below is ajax request to backend server where all of state on this page is being sent to server and eventually querying db 
+$.post( 'http://localhost:3000/trips', {name: this.state.name, origin: this.state.origin, destination: this.state.destination, date: this.state.date}, 
+  //callback function below waits for above to be executed and then takes in what server sends back to client (data) and sends alert 
+  function(data){ 
+    alert( data.name + " will be driving you to "+ data.destination + " Make sure to be in " + data.origin + " on " + data.date)})
+    
+} 
   render() {
     return (
       <div className="rider">
