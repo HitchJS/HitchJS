@@ -4,126 +4,70 @@ import React from 'react';
 class RiderForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      destination: '',
-      origin: '',
-      departure: '',
-    };
+    this.state = {name: '', origin: '', destination: '', departure: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.originChange = this.originChange.bind(this);
+    this.destinationChange = this.destinationChange.bind(this);
+    this.departureChange = this.departureChange.bind(this);
   }
 
   handleChange(event) {
-    console.log('this is it', event.target.name)
-    this.setState({value: event.target.name});
+    console.log(event.target.value,)
+    this.setState({name: event.target.value});
+  }
 
-    // console.log(this.state.name)
+  originChange(event) {
+    console.log(event.target.value)
+    this.setState({origin: event.target.value});
+  }
+
+   destinationChange(event) {
+    console.log(event.target.value)
+    this.setState({destination: event.target.value});
+  }
+   departureChange(event) {
+    console.log(event.target.value)
+    this.setState({departure: event.target.value});
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.name);
+    //alert('A name was submitted: ' + this.state.destination +this.state.origin);
+    console.log(this.state.name, this.state.origin, this.state.destination, this.state.departure)
     event.preventDefault();
+
+$.post( 'http://localhost:3000/random', {name: this.state.name, origin: this.state.origin, destination: this.state.destination, departure: this.state.departure} ).then(function(data){console.log(data)})
+
   }
-  
+
   render() {
     return (
-      <div>
-       
-        <form onSubmit={this.handleSubmit}>
+
+      <form onSubmit={this.handleSubmit}>
         <label>
-          Name:<input type="text" value={this.state.value} onChange={this.handleChange} />
-          Destination:<input type="text" value={this.state.destination} onChange={this.handleChange} />
-          Origin:<input type="text" value={this.state.origin} onChange={this.handleChange} />
-          Departure Date:<input type="text" value={this.state.departure} onChange={this.handleChange} />
+          Name:
+          <input type="text" value={this.state.name} onChange={this.handleChange} />
+        </label>
+        <label>
+          Origin:
+          <input type="text" value={this.state.origin} onChange={this.originChange} />
+        </label>
+        <label>
+          Destination:
+          <input type="text" value={this.state.destination} onChange={this.destinationChange} />
+        </label>
+        <label>
+          Departure:
+          <input type="text" value={this.state.departure} onChange={this.departureChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
-      </div>
+
     );
   }
-
-// console.log(this.state.name)
 }
 
+
+
 export default RiderForm;
-
-
-// class NameForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {value: ''};
-
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-
-//   handleChange(event) {
-//     this.setState({value: event.target.value});
-//   }
-
-//   handleSubmit(event) {
-//     alert('A name was submitted: ' + this.state.value);
-//     event.preventDefault();
-//   }
-
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <label>
-//           Name:
-//           <input type="text" value={this.state.value} onChange={this.handleChange} />
-//         </label>
-//         <input type="submit" value="Submit" />
-//       </form>
-//     );
-//   }
-// }
-
-
-
-// Name: <input type="text"></input><br/>
-//           Destination: <input type="text"></input><br/>
-//           Origin: <input type="text"></input><br/>
-//           Departure Date: <input type="text"></input><br/>
-//           <button type="button" onClick={function(){$.ajax({
-//             type: "POST",
-//             url: 'http://localhost:3000/random'
-            
-//             }).then(function(data){
-//             console.log(data)
-//             })}}>Submit
-//           </button>
-
-
-
-
-// import React from 'react';
-
-
-// class RiderForm extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <form>
-//           Name: <input type="text"></input><br/>
-//           Destination: <input type="text"></input><br/>
-//           Origin: <input type="text"></input><br/>
-//           Departure Date: <input type="text"></input><br/>
-//           <button type="button" onClick={function(){$.ajax({
-//             type: "POST",
-//             url: 'http://localhost:3000/random'
-            
-//             }).then(function(data){
-//             console.log(data)
-//             })}}>Submit
-//           </button>
-    
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-
-// export default RiderForm;
