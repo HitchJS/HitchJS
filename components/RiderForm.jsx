@@ -35,6 +35,7 @@ class RiderForm extends React.Component {
 $.post( 'http://localhost:3000/trips', {name: this.state.name, origin: this.state.origin, destination: this.state.destination, date: this.state.date}, 
   //callback function below waits for above to be executed and then takes in what server sends back to client (data) and sends alert 
   function(data){ 
+    // below displays when a match is found in db on same day and origin and destination. we didn't get to the message if there is no match found in db
     alert( data.name + " will be driving you to "+ data.destination + " Make sure to be in " + data.origin + " on " + data.date)})
     
 } 

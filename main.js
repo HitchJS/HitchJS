@@ -10,7 +10,10 @@ import App from './components/App.js';
 
 
 // child clone in react router in order to pass state?
-
+// below in the future you can nest componets inside other "routes". with react router client react-router makes app a SPA app
+// and does not make calls to the server to serve up other routes. it's already on client. 
+//notice the difference between self-closing tags and the tags that are being closed with </Route> this is how you can nest
+//components
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>

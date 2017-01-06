@@ -1,9 +1,10 @@
 const pg = require('pg');
 const Sequelize = require('sequelize');
 //const sequelize = new Sequelize('postgres://vincentking:ilovetesting@localhost:5432/hitch');
+// below we are using a cloud db called elephantsql. 
 const sequelize = new Sequelize('postgres://fkdyrlsr:JzhorQXQH_LpYcX30-1LWHvZvPFuqvRX@elmer.db.elephantsql.com:5432/fkdyrlsr')
 
-//below is to chekc if your db is connected
+//below is to check if your db is connected
 sequelize
   .authenticate()
   .then(function(err) {

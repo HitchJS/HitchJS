@@ -1,8 +1,10 @@
 import React from 'react';
 class DriverForm extends React.Component {
+  // the state below is the form data that we saved and that is sent to database
   constructor(props) {
     super(props);
     this.state = {destination: '', origin: '', name: '', date: '', seats: '', price: '', email: ''};
+    // if we don't bind like below functions will be undefined onChange
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.originChange = this.originChange.bind(this);
@@ -13,6 +15,7 @@ class DriverForm extends React.Component {
     this.emailChange = this.emailChange.bind(this);
   
   }
+  //these below handle all the form specific values
   handleChange(event) {
     console.log(event.target.value,)
     this.setState({destination: event.target.value});
@@ -41,6 +44,7 @@ class DriverForm extends React.Component {
     console.log(event.target.value)
     this.setState({email: event.target.value});
   }
+  //below is ajax post request to send form data to database
   handleSubmit(event) {
   event.preventDefault();
    $.post( 'http://localhost:3000/drivers', {destination: this.state.destination, origin: this.state.origin, name: this.state.name, date: this.state.date, seats: this.state.seats, price: this.state.price, email: this.state.email} ).then(function(data){console.log(data)})
