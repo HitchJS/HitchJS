@@ -1,0 +1,106 @@
+.roleSelector {
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+}
+
+.roleSelector button {
+  width: 200px;
+  height: 200px;
+  border: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.rider {
+  border: 1px solid black;
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  opacity: 0.82;
+}
+
+body {
+  background-image: url('http://cdn.paper4pc.com/images/landscapes-roads-wallpaper-4.jpg');
+  background-size: cover;
+}
+
+.rider2 {
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.rider2 input {
+  background-color: white, 0.5;
+}
+
+.login {
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 35%;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.signup {
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 35%;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.login label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+
+.login input {
+  display: inline-block;
+  float: left;
+}
+
+.login form {
+  display: inline-block;
+}
+
+.driver-btn {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  background-image: url("https://carsalespros.files.wordpress.com/2011/07/teen-driver-car-crashes.jpg?w=598&h=396");
+  background-size: cover;
+}
+
+.driver-btn:hover {
+  box-shadow: 0px 0px 20px #fff;
+}
+
+.rider-btn {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  background-image: url('http://slovakiabustravel.com/wp-content/uploads/2016/01/passenger_car_hire_1.jpg');
+  background-size: cover;
+}
+
+.rider-btn:hover {
+  box-shadow: 0px 0px 20px #fff;
+}
