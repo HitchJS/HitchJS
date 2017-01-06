@@ -45,7 +45,7 @@ class DriverForm extends React.Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value,)
+    console.log(event.target.value)
     this.setState({destination: event.target.value});
   }
 

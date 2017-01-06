@@ -68,7 +68,7 @@ app.post('/updateSeats', function(req, res){
 
 app.post('/random', function(req, res){
 	console.log("new random!!")
-	res.send("hello back!!")
+	res.send(req.body)
 
 })
 
