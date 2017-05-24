@@ -6,6 +6,7 @@ import DriverForm from './components/DriverForm.jsx';
 import AppLogin from './components/AppLogin.jsx';
 import Signup from './components/signup.jsx';
 import RiderForm from './components/RiderForm.jsx';
+import AllDrivers from './components/AllDrivers.jsx';
 import App from './components/App.js';
 
 
@@ -17,6 +18,7 @@ import App from './components/App.js';
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>
+      <Route path = "/alldrivers" component = {AllDrivers}/>
         <IndexRoute component= {AppLogin} />
         <Route path = "/signup" component = {Signup} />
         <Route path = "/roleselector" component = {RoleSelector}>

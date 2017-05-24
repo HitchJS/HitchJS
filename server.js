@@ -32,9 +32,7 @@ app.post('/trips', function(req,res){
         res.send(driver[0].dataValues);
     })
 })
-//below not currently in use. 
 app.get('/allDrivers', function(req,res){
-    //will render all drivers for when people want to see all trips
     Driver.findAll().then(function(driver){
         res.send(driver)
     })
@@ -64,11 +62,7 @@ app.post('/updateSeats', function(req, res){
         })
     })
 })
-//below just used for test purposes. not used in production
-app.post('/random', function(req, res){
-    console.log("new random!!")
-    res.send(req.body)
-})
+
 app.listen(3000, function(){
     console.log("new Hitch server is running on 3000")
 })

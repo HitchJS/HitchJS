@@ -126,3 +126,19 @@ body {
 .driver2 input {
   background-color: white, 0.5;
 }
+
+.driver-div {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 25%;
+  margin: 3px;
+}
+
+.driver-parent-div {
+  display: flex;
+  flex-wrap: wrap
+}
+.allDriversMain {
+  color:white
+}
