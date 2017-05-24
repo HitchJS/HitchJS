@@ -11,6 +11,7 @@ class Login extends React.Component {
           <label>Password: </label><input type="text"></input><br/>
           <button type="button" onClick={function(){browserHistory.push('roleselector')}}>Login</button>
           <button type="button" onClick={function(){browserHistory.push('signup'); console.log(browserHistory)}}>Signup</button>
+          <button type="button" onClick={function(){browserHistory.push('alldrivers'); console.log(browserHistory)}}>All Drivers</button>
           <button type="submit">Forgot Password?</button>
           
         </form>
